@@ -154,6 +154,3 @@ while(x < 20){
   System.out.println(x);
 }
 ```
-
-int[] array = new int[100];
-array[0] = elemento1

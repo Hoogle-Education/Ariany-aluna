@@ -33,6 +33,20 @@ Objeto:
 Pessoa joao;
 ```
 
+## Métodos
+
+São conjuntos de ações que um objeto pode executar.
+
+```
+  <privacidade> <tipo_do_retorno> <nome> ( <parametros> ){
+    <código>
+  }
+```
+
+### Palavra `return`
+
+A palavra `return` **interrompe** a execução de um método, pois basicamente cumpre o que se espera de um método com retorno. Retornar alguma coisa.
+
 ## Agora no `java`:
 
 ```java
@@ -44,6 +58,8 @@ class Aluno {
   String nome;
   int idade;
   String turma;
+
+  // métodos
 
 }
 

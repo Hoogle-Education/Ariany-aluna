@@ -49,9 +49,6 @@ class Pessoa {
   int age;
   String phone;
 
-  public Pessoa(){
-  }
-
   public Pessoa(String name, int age){
     this.name = name;
     this.age = age;

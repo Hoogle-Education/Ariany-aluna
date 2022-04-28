@@ -154,3 +154,58 @@ while(x < 20){
   System.out.println(x);
 }
 ```
+
+# Estrutura `switch-case`
+
+O `switch` basicamente recebe um valor, e compara dentre vários casos. Todo caso, trabalha com uma flag, que ative a execução de **todos** os códigos abaixo do caso verificado.
+
+Para interromper a chamada da flag, precisamos de um `break` entre os casos.
+
+Exemplo simples:
+```java
+switch( value ){
+  case 1 :
+    System.out.println("get in");
+    System.out.println("running here");
+    System.out.println("get out");
+    break;
+  case 2 :
+    System.out.println("not enter here");
+    break;
+  default:
+    System.out.println("Default case");
+    break;
+}
+```
+
+input:
+```java
+value = 1
+```
+
+output
+```java
+get in
+running here
+get out
+```
+
+## Melhorando o uso
+
+Através das flags do switch case, podemos agrupar uma mesma tomada de ação, para vários casos que podem estar ou não correlacionados!
+
+```java
+public static boolean isVowel(String unknowed){
+    
+    switch (unknowed) {
+      case "a":
+      case "e":
+      case "i":
+      case "o":
+      case "u":
+        return true;    
+      default:
+        return false;
+    }
+  }
+```

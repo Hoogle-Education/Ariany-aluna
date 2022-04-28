@@ -32,3 +32,16 @@ public void setAge(int age){
 
 ```
 
+## Controlando o acesso
+
+Como no caso acima não queremos que a modificação da idade seja permitida, iremos desabilitar(*apagar*) o método `setAge()`:
+
+```java
+
+public int getAge(){
+  return age;
+}
+
+/*deleted*/
+
+```

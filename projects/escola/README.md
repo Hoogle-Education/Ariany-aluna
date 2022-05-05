@@ -1,18 +1,19 @@
-## Getting Started
+# Projeto School System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Objetivo
 
-## Folder Structure
+Criar um sistema capaz de fazer um CRUD todos os alunos de uma escola.
 
-The workspace contains two folders by default, where:
+**crud** = (**CREATE | RETRIEVE | UPDATE | DELETE**)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Além disso, cada aluno possui um modelo de pagamento inerente a sua entidade.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Estado atual
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Melhorando o menu e a interação com o usuário e adicionando a opção de adicionar um novo aluno.
 
-## Dependency Management
+## Problemas atuais
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Capacidade máxima de alunos (1000 alunos no máximo).
+2. A cada vez que o programa roda a escola é refeita e os alunos são descartados.
+3. A remoção de um aluno é problemática por causa do tipo `Aluno[]` usado para guardar alunos.

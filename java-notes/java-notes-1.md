@@ -50,13 +50,13 @@ if( /*condição*/ ){
 
 exemplo:
 ```java
-  if( nota >= 7.0 ){
-    sysout("approved");
-  } else if( nota >= 4.0 ){ 
-    sysout("will have to make another test");
-  } else {
-    sysout("reproved")
-  }
+if( nota >= 7.0 ){
+  sysout("approved");
+} else if( nota >= 4.0 ){ 
+  sysout("will have to make another test");
+} else {
+  sysout("reproved")
+}
 ```
 
 ### Otimização de escrita
@@ -80,7 +80,7 @@ Se há **apenas um comando**, podemos omitir as chaves em estruras mais simples.
 | -- | `a--;`| Diminui um da variável |
 | += | `a += x;`| `a = a + x` |
 | /= | `a /= x;`| `a = a / x` |
-| += | `a %= x;`| `a = a % x` |
+| %= | `a %= x;`| `a = a % x` |
 |%| `a%b`| Retorna o resto de a divido por b |
 |!=| `a!=b`| a diferente de b, retorna `true` ou `false` |
 
@@ -115,7 +115,7 @@ for(/*inicialização*/ ; /*condição*/ ; /*update*/ ){
 ```
 
 ```java
-for(int i=0; i<=10 ; i++){
+for(int i=0; i<10 ; i++){
   System.out.println(i);
 }
 ```

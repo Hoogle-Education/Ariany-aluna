@@ -30,7 +30,7 @@ Fechar ele, evita erros de o `Scanner` não ter sido fechado.
 
 ## Méotodos de leitura do `Scanner`
 
-### `.next()` 
+### 1`.next()` 
 
 Captura o próximo dado inserido no terminal, sempre em forma de `String`. `String` é usado para garantir a segurança do código.
 
@@ -51,6 +51,7 @@ Analogamente: `.nextDouble()` , `.nextFloat()` , `.nextChar()`.
 ### 3. `.nextLine()`
 
 Exatamente igual ao `.next()`, porém só termina a leitura depois de ler o `<enter>`.
+
 
 ⚠️ **Cuidado com o bug do nextLine**
 
@@ -91,7 +92,7 @@ Caso mais raro: Vetor fixo no código
 
 Caso mais comum: Reservando posições em um vetor a ser acessado.
 ```java
-  int[] array = new int[10]
+  int[] meuVetor = new int[10]
 ```
 
 A linha acima, cria um vetor chamado `array` e aloca 10 posições dentro dele.
@@ -103,10 +104,28 @@ A linha acima, cria um vetor chamado `array` e aloca 10 posições dentro dele.
 Para acessar um dado no vetor, precisamos chamá-lo pelo seu nome, e depois indicar a posição desejada no vetor, sempre indexando em zero.
 
 ```java
-  System.out.println(array[0]);
+  System.out.println(meuVetor[0]);
 ```
 Esta chamada retorna o primeiro elemento do vetor, da mesma forma pode ser usada para modificar o valor contigo nela:
 
 ```java
   array[0] = 3;
+```
+
+## Extra: Fazendo um array adicionar variáveis novas independente do tamanho
+
+```java
+public void add(int element, int[] array){
+
+  int size = aray.lenght;
+  int[] copy = array;
+  array = new int[size+1];
+
+  for(int i=0; i<size-1; i++){
+    array[i] = copy[i];
+  }
+
+  array[size-1] = element;
+
+}
 ```

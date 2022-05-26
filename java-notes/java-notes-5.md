@@ -16,20 +16,21 @@ Pensando na classe Pessoa:
   private int age;
 ```
 
+
 ❌ **Problema:** Agora eu não posso consultar o valor destas variáveis, pois elas são privadas apenas para a classe.
 
-✅ **Solução final:** Recuro o controle a estes dados atrravés de métodos, e quando eu não quiser que um deles esteja disponível basta não colocar / apagar o método.
+✅ **Solução final:** Recurpero o controle a estes dados através de métodos, e quando eu não quiser que um deles esteja disponível basta não colocar / apagar o método.
 
 ```java
-
+// ativo
 public int getAge(){
   return age;
 }
 
+//ativo
 public void setAge(int age){
   this.age = age;
 }
-
 ```
 
 ## Controlando o acesso

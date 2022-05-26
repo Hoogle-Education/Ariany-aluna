@@ -23,11 +23,15 @@ class Pessoa {
   int age;
   String phone;
 
-  public Pessoa(String name, String age){
+  public Pessoa(String name, int age){
     this.name = name;
     this.age = age;
   }
 }
+```
+
+```java
+Pessoa joao = new Pessoa("joao da silva", 12);
 ```
 
 ## Keyword `this`
@@ -49,6 +53,9 @@ class Pessoa {
   int age;
   String phone;
 
+  public Pessoa(){
+  }
+
   public Pessoa(String name, int age){
     this.name = name;
     this.age = age;
@@ -63,3 +70,27 @@ class Pessoa {
 }
 ```
 
+// ------------------
+```java
+Jogador {
+  String username;
+  int score;
+
+  Jogador(String nome){
+    this.nome = nome;
+    score = 0;
+  }
+
+  Jogador(String nome, int score){
+    this.nome = nome;
+    this.score = score;
+  }
+}
+
+Pessoa joao = new Jogador("joao");
+
+joao = new Jogador(joao.nome, joao.score+1);
+
+Player jogador = new Jogador("Pedrinho123@@");
+Plater jogador = new jogador("Luis4321", 54);
+```

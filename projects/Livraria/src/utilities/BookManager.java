@@ -6,18 +6,18 @@ import application.Librariapp;
 import entities.Book;
 
 public class BookManager {
-  
-  public Book searchByAuthor(String title){
+
+  public Book searchByAuthor(String title) {
 
     int start = 0;
     int end = Librariapp.books.size() - 1;
 
-    while(start <= end){
+    while (start <= end) {
       int mid = (start + end) / 2;
 
-      if(Librariapp.books.get(mid).getTitle().equalsIgnoreCase(title)){
+      if (Librariapp.books.get(mid).getTitle().equalsIgnoreCase(title)) {
         return Librariapp.books.get(mid);
-      } else if(Librariapp.books.get(mid).getTitle().compareToIgnoreCase(title) > 0){
+      } else if (Librariapp.books.get(mid).getTitle().compareToIgnoreCase(title) > 0) {
         end = mid - 1;
       } else {
         start = mid + 1;
@@ -27,17 +27,29 @@ public class BookManager {
     return null;
   }
 
-  public void remove(String title){
+  public void remove(String title) {
     Book toRemove = searchByAuthor(title);
     Librariapp.books.remove(toRemove);
   }
 
-  public void remove(Date minDate){
-    for(int i=0; i<Librariapp.books.size(); i++){
-      if(Librariapp.books.get(i).getRelease().before(minDate)){
+  public void remove(Date minDate) {
+    for (int i = 0; i < Librariapp.books.size(); i++) {
+      if (Librariapp.books.get(i).getRelease().before(minDate)) {
         Librariapp.books.remove(i);
         i--;
         System.out.println("removing");
+      }
+    }
+  }
+
+  public void sortByTitle(){
+    for(int i=0; i<Librariapp.books.size(); i++){
+      for(int j=0; (j<Librariapp.books.size()-1); i++){
+        if (Librariapp.books.get(i).getTitle().compareToIgnoreCase(Librariapp.books.get(i+1).getTitle()) > 0){
+          Book temp = Librariapp.books.get(i);
+          Librariapp.books.set(i, Librariapp.books.get(i+1));
+          Librariapp.books.set(i+1, temp);
+        }
       }
     }
   }

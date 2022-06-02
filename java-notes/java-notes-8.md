@@ -58,7 +58,31 @@ for(int i=0; i<(n-1);  ){
   } else {
     i++;
   }
+
 }
 ```
 
 ## 3. Selection sort
+
+A `selection` baseia-se em encontrar o menor elemento local da sub-lista e colocá-lo como primeiro. Depois repetir a `selection` para a sublista, exceto o primeiro elemento.
+
+```java
+
+int n = vetor.length;
+
+for(int i=0; i<n; i++){
+  int pos_menor = i;
+
+  for(int j = i+1; j < n; j++){
+    if(vetor[j] < vetor[pos_menor]) pos_menor = j;
+  }
+
+  int temp = vetor[i];
+  vetor[i] = vetor[pos_menor];
+  vetor[pos_menor] = temp;
+}
+```
+
+## Insertion Sort
+
+Na insertion sort, comparamos um elemento **enquanto** ele for menor que o anteior a ele. Desta forma, ele é quem deveria ser o anterior.

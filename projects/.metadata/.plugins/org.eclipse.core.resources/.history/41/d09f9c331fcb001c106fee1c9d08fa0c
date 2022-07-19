@@ -1,0 +1,49 @@
+package entities;
+
+import entities.enums.Color;
+
+public class Quadrilatero {
+
+	Color color;
+	int x;
+	int y;
+	int z;
+	int w;	
+	
+	public Quadrilatero(Color color, int x, int y, int z, int w) {
+		this.color = color;
+		this.x = x;
+		this.y = y;
+		this.z = z;
+		this.w = w;
+	}
+
+	public Color getColor() {
+		return color;
+	}
+
+	public void setColor(Color color) {
+		this.color = color;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public int getZ() {
+		return z;
+	}
+
+	public int getW() {
+		return w;
+	}
+	
+	
+	
+	
+	
+}

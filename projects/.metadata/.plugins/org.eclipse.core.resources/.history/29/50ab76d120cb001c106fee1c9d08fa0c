@@ -1,0 +1,15 @@
+package application;
+
+import entities.Quadrilatero;
+import entities.enums.Color;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Quadrilatero quad = new Quadrilatero(Color.GREEN, 12.0);
+		
+
+	}
+
+}

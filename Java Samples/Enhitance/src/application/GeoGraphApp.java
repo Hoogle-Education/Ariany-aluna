@@ -1,5 +1,9 @@
 package application;
 
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 import entities.Circle;
 import entities.Rectangle;
 import entities.Shape;
@@ -32,6 +36,10 @@ public class GeoGraphApp {
     System.out.println("------------------------");
 
     Shape s3 = new Square(1.2, Color.RED, 3.0);
+
+    List <Integer> list = List.of(1, 2, 3);
+    
+    list.forEach(System.out::println);
 
     System.out.println( ((Square)s3).area() );
   }

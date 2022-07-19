@@ -7,7 +7,7 @@
 ```
 
 - objeto **`tem/não tem`** atributo
-- objeto **`tem/não tem`** método
+- objeto **`faz/não faz`** método
 - objeto **`é/não é`** um outro objeto
 
 ## 1. Classes base
@@ -61,5 +61,57 @@ public class Circle extends Shape {
     this.radius = radius;
   }
 
+}
+```
+
+## 🔑 Keyword `protected`
+
+Trata como `public` no pacote e como `private` fora do pacote.
+
+📦 `entities` > 🧩`MyClass.java`
+```java
+public class MyClass {
+  protected String name = "default name";
+}
+```
+
+📦 `entities` > 🧩`MyClass.java`
+```java
+public class MySubClass extends MyClass {
+  name = "other name";
+}
+```
+
+## 🔑 Keyword `Override`
+
+Usamos `@Override` para sobreescrever um método que veio de uma classe mãe.
+
+método `toString()` vindo da classe `Object`: 
+```java
+@Override
+public String toString(){
+  return "text";
+}
+```
+
+### Aplicando em heranças
+
+📦 `entities` > 🧩`MyClass.java`
+```java
+public class MyClass {
+  public String sendMessage(){
+    return "Hello i'm message";
+  }
+}
+```
+
+📦 `entities` > 🧩`MyClass.java`
+```java
+public class MySubClass extends MyClass{
+
+  @Override  
+  public String sendMessage(){
+    return "Hello i'm another code of message";
+  }
 }
 ```

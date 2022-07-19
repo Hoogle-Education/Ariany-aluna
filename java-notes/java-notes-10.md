@@ -1,6 +1,6 @@
 # Herança
 
-```
+``` 
 - objeto
 - atributo
 - método
